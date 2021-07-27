@@ -15,7 +15,7 @@ weatherForm.addEventListener("submit", (e) => {
 
 const getForecast = (location) => {
  
-  fetch(`/weather?location=${location}`).then(
+  fetch("/weather?location="+location).then(
     (response) => {
       response.json().then((data) => {
         if (data.error) {
