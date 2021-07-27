@@ -6,7 +6,7 @@ const geocode = require("./utils/geocode");
 const forecast = require("./utils/foreCast");
 
 const app = express();
-const port = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 //TODO:Define Paths for Express config
 const publicDirectory = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
@@ -104,4 +104,4 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(port, () => console.log("Express server listening on port "+ port));
+app.listen(PORT, () => console.log("Express server listening on port "+ PORT));
